@@ -11,19 +11,19 @@ Take it one story at a time. It is easier to have many small wins than to have o
 
 X1. As a user I can see a 10 x 10 grid gameboard.
 
-2. As a user when I click on a position, the position changes color so that I can tell that a position has been torpedoed.
+X2. As a user when I click on a position, the position changes color so that I can tell that a position has been torpedoed.
 
-3. As a user I can see how many torpedoes I have so that I can keep track of how many I have used.
+X3. As a user I can see how many torpedoes I have so that I can keep track of how many I have used.
 
-4. As a user once a position has been torpedoed, it cannot be torpedoed again so that I don't waste torpedoes.
+X4. As a user once a position has been torpedoed, it cannot be torpedoed again so that I don't waste torpedoes.
 
-5. As user I expect there to be 5 single length ships on the board.
+X5. As user I expect there to be 5 single length ships on the board.
 
-6. As a user when I click on a position I can see if there was a ship at that location so that I can see if I hit a ship. If there is a ship it counts as a hit.
+X6. As a user when I click on a position I can see if there was a ship at that location so that I can see if I hit a ship. If there is a ship it counts as a hit.
 
-7. As a user I have won the game when I have 5 hits on the board, so that I know when the game is won and over.
+X7. As a user I have won the game when I have 5 hits on the board, so that I know when the game is won and over.
 
-8. As a user I have a limit of 25 torpedoes to hit all ships, and when I run out I have lost the game.
+X8. As a user I have a limit of 25 torpedoes to hit all ships, and when I run out I have lost the game.
 
 9. As a user if I lose, I can see where the ships were, so that I know there were actual ships on the board.
 
