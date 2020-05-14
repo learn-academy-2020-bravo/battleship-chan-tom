@@ -9,13 +9,13 @@ class Square extends Component{
   }
 
   showIfHit = () => {
-    if (this.props.battleships[this.props.index] === 1 && this.props.gameOver === false) {
+    if (this.props.battleships[this.props.index] !== 0 && this.props.gameOver === false) {
       this.setState({revealShip: true})
     }
   }
 
   showShipsGameOver = () => {
-    if (this.props.gameOver === true && this.props.battleships[this.props.index] === 1 && this.state.revealShip === false) {
+    if (this.props.gameOver === true && this.props.battleships[this.props.index] !== 0 && this.state.revealShip === false) {
       this.setState({revealShip: true})
     }
   }
