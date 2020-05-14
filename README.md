@@ -25,31 +25,31 @@ X7. As a user I have won the game when I have 5 hits on the board, so that I kno
 
 X8. As a user I have a limit of 25 torpedoes to hit all ships, and when I run out I have lost the game.
 
-9. As a user if I lose, I can see where the ships were, so that I know there were actual ships on the board.
+X9. As a user if I lose, I can see where the ships were, so that I know there were actual ships on the board.
 
 ### Second Epic
 
-1. As a user I can see how many torpedoes I have left instead of how many I have used.
+X1. As a user I can see how many torpedoes I have left instead of how many I have used.
 
-2. As a user I don't have ships that touch, so that there is always space between ships.
+X2. As a user I don't have ships that touch, so that there is always space between ships.
 
-3. As a user I can torpedo a 5 block ship, so that the game is diverse.
+X3. As a user I can torpedo a 5 block ship, so that the game is diverse.
 
-4. As a user I can torpedo two 4 block ships, so that the game is diverse.
+X4. As a user I can torpedo two 4 block ships, so that the game is diverse.
 
-5. As a user I can torpedo two 3 block ships,, so that the game is diverse.
+X5. As a user I can torpedo two 3 block ships,, so that the game is diverse.
 
-6. As a user I can torpedo two 2 block ships, so that the game is diverse.
+X6. As a user I can torpedo two 2 block ships, so that the game is diverse.ya
 
-7. As a user I can torpedo one 1 block submarine, so that the game is diverse.
+X7. As a user I can torpedo one 1 block submarine, so that the game is diverse.
 
 ### Third Epic
-1. As a user the ships can be oriented vertical or horizontal but not diagonally, so that there is a diverse placement of ships on the board.
+X1. As a user the ships can be oriented vertical or horizontal but not diagonally, so that there is a diverse placement of ships on the board.
 
-2. As a user I can randomly place the two 4 block ships, one vertical one horizontal, so that there is a diverse placement of 4 block ships on the board.
+X2. As a user I can randomly place the two 4 block ships, one vertical one horizontal, so that there is a diverse placement of 4 block ships on the board.
 
-3. As a user I can randomly place the 3 block ships, one vertical one horizontal, so that there is a diverse placement of 3 block ships on the board.
+X3. As a user I can randomly place the 3 block ships, one vertical one horizontal, so that there is a diverse placement of 3 block ships on the board.
 
-4. As a user I can randomly place the two 2 block ships, one vertical one horizontal, so that there is a diverse placement of 2 block ships on the board.
+X4. As a user I can randomly place the two 2 block ships, one vertical one horizontal, so that there is a diverse placement of 2 block ships on the board.
 
 5. As a user I can see the status of ships I have sunk/not sunk, so that I have an easier way of knowing how many and which ships I left.

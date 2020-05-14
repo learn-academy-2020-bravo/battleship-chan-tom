@@ -9,16 +9,22 @@ class Square extends Component{
   }
 
   showIfHit = () => {
-    if (this.props.battleships[this.props.index] === 1) {
+    if (this.props.battleships[this.props.index] === 1 && this.props.gameOver === false) {
       this.setState({revealShip: true})
     }
-    console.log("Im here")
+  }
+
+  showShipsGameOver = () => {
+    if (this.props.gameOver === true && this.props.battleships[this.props.index] === 1 && this.state.revealShip === false) {
+      this.setState({revealShip: true})
+    }
   }
 
   render(){
 
     return(
       <React.Fragment>
+        {this.showShipsGameOver()}
         <div
           id="square"
           style = { {backgroundColor: this.props.grid[this.props.index]} }
@@ -27,7 +33,7 @@ class Square extends Component{
             this.showIfHit()
           }}
         >
-       { this.state.revealShip && "HIT" }
+       { this.state.revealShip && "Ship" }
         </div>
       </React.Fragment>
     )
