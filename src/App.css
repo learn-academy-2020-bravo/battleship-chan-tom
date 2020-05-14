@@ -1,3 +1,15 @@
+
+#holder{
+  width: 350px;
+  margin: 100px;
+}
+
+#grid{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
 #square{
   width: 30px;
   height: 30px;

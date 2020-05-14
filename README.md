@@ -9,7 +9,7 @@ Take it one story at a time. It is easier to have many small wins than to have o
 
 ### First Epic
 
-1. As a user I can see a 10 x 10 grid gameboard.
+X1. As a user I can see a 10 x 10 grid gameboard.
 
 2. As a user when I click on a position, the position changes color so that I can tell that a position has been torpedoed.
 
