@@ -429,11 +429,12 @@ class App extends Component{
         <p className = 'centering'> THERE ARE {this.state.shipsRemaining} UNHIT SHIP QUADRANTS REMAINING</p>
         </div>
       </div>
+      </div>
       <div className = 'centering bottom row' > 
-        <h3 className = 'centering'>{ this.state.winText && "YOU HAVE SUNK ALL THE SHIPS. YOU HAVE WON." } </h3>
+        <h3 className = 'centering'> { this.state.winText && "YOU HAVE SUNK ALL THE SHIPS. YOU HAVE WON." } </h3>
         <h3 className = 'centering'>{ this.state.gameOver && "YOU COULD NOT FIND ALL THE SHIPS. GAME OVER - YOU LOSE." } </h3>
       </div>
-      </div>
+      
       </React.Fragment>
     )
   }
