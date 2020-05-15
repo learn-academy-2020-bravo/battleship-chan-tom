@@ -81,7 +81,7 @@ class App extends Component{
   checkWinner = () => {
     if (this.state.shipsRemaining === 0 && this.state.winText === false)  {
       this.setState({winText: true})
-    } else if (this.state.torpedoCount === 0 && this.state.gameOver === false) {
+    } else if (this.state.torpedoCount === 0 && this.state.gameOver === false && this.state.winText === false) {
       this.setState({gameOver: true})
     }
   }
