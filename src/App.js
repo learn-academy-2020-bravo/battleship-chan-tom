@@ -23,11 +23,13 @@ class App extends Component{
       threeShipHorSunk: false,
       threeShipVertSunk: false,
       twoShipHorSunk: false,
-      twoShipVertSunk: false
+      twoShipVertSunk: false,
+      resetGame: false,
     }
   }
 
   handleChange = (click) =>  {
+    this.resetButtontoFalse()
     if (this.state.gameOver === false && this.state.winText === false){
       if (this.state.grid[click] === "white") {
         this.setState({grid: this.state.grid.map((value,index) => {
@@ -81,6 +83,38 @@ class App extends Component{
       this.setState({winText: true})
     } else if (this.state.torpedoCount === 0 && this.state.gameOver === false) {
       this.setState({gameOver: true})
+    }
+  }
+
+  resetBoard = () => {
+      this.setState ({ 
+      grid:[...Array(100).fill("white")],
+      battleships: [...Array(100).fill(0)],
+      torpedoCount: 50,
+      shipsRemaining: 18,
+      winText: false,
+      gameOver: false,
+      fourShipHor: 4,
+      fourShipVert: 4,
+      threeShipHor: 3,
+      threeShipVert: 3,
+      twoShipHor: 2,
+      twoShipVert: 2,
+      fourShipHorSunk: false,
+      fourShipVertSunk: false,
+      threeShipHorSunk: false,
+      threeShipVertSunk: false,
+      twoShipHorSunk: false,
+      twoShipVertSunk: false,
+      resetGame:true
+    })
+    this.componentDidMount()
+    
+  }
+
+  resetButtontoFalse = () => {
+    if (this.state.resetGame === true) {
+      this.setState ({ resetGame : false })
     }
   }
 
@@ -360,6 +394,7 @@ class App extends Component{
           handleChange = {this.handleChange}
           battleships = {this.state.battleships}
           gameOver = {this.state.gameOver}
+          resetGame = {this.state.resetGame}
         />
       )
     })
@@ -367,22 +402,38 @@ class App extends Component{
       <React.Fragment>
       {this.checkShipSunk()}
       {this.checkWinner()}
-        <h1>Battleship</h1>
-        <div id="holder">
+
+        <h1>BATTLESHIP</h1>
+        <div id = 'centerpage'>
+        <div className='row'>
+        <div className='column left'>
+          <div id="holder">
           <div id="grid">
             { grid }
           </div>
+            <div id = 'button'><button onClick = { this.resetBoard } > RESET BOARD </button>
+            </div>
+          </div> 
         </div>
-        <p> YOU HAVE {this.state.torpedoCount} TORPEDOS REMAINING</p>
-        <p> THERE ARE {this.state.shipsRemaining} UNHIT SHIP QUADRANTS REMAINING</p>
-        <p> {this.state.fourShipHorSunk && "YOU HAVE SUNK THE HORIZONTAL FOUR SHIP"} </p>
-        <p> {this.state.threeShipHorSunk && "YOU HAVE SUNK THE HORIZONTAL THREE SHIP"} </p>
-        <p> {this.state.twoShipHorSunk && "YOU HAVE SUNK THE HORIZONTAL TWO SHIP"} </p>
-        <p> {this.state.fourShipVertSunk && "YOU HAVE SUNK THE VERTICAL FOUR SHIP"} </p>
-        <p> {this.state.threeShipVertSunk && "YOU HAVE SUNK THE VERTICAL THREE SHIP"} </p>
-        <p> {this.state.twoShipVertSunk && "YOU HAVE SUNK THE VERTICAL TWO SHIP"} </p>
-        <p> { this.state.winText && "YOU HAVE SUNK ALL THE SHIPS. YOU HAVE WON." } </p>
-        <p>{ this.state.gameOver && "YOU COULD NOT FIND ALL THE SHIPS. GAME OVER - YOU LOSE." } </p>
+        <div className = 'column right'>
+        <h3>HORIZONTAL SHIPS</h3>
+        <p> FOUR LENGTH : {this.state.fourShipHorSunk && "SUNK"} </p>
+        <p> THREE LENGTH : {this.state.threeShipHorSunk && "SUNK"} </p>
+        <p> TWO LENGTH : {this.state.twoShipHorSunk && "SUNK"} </p>
+        <h3>VERTICAL SHIPS</h3>
+        <p> FOUR LENGTH : {this.state.fourShipVertSunk && "SUNK"} </p>
+        <p> THREE LENGTH : {this.state.threeShipVertSunk && "SUNK"} </p>
+        <p> TWO LENGTH : {this.state.twoShipVertSunk && "SUNK"} </p>
+        <p className = 'centering'>-------</p>
+        <p className = 'centering'> YOU HAVE {this.state.torpedoCount} TORPEDOS REMAINING</p>
+        <p className = 'centering'> THERE ARE {this.state.shipsRemaining} UNHIT SHIP QUADRANTS REMAINING</p>
+        </div>
+      </div>
+      <div className = 'centering bottom row' > 
+        <h3 className = 'centering'>{ this.state.winText && "YOU HAVE SUNK ALL THE SHIPS. YOU HAVE WON." } </h3>
+        <h3 className = 'centering'>{ this.state.gameOver && "YOU COULD NOT FIND ALL THE SHIPS. GAME OVER - YOU LOSE." } </h3>
+      </div>
+      </div>
       </React.Fragment>
     )
   }

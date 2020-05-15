@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import ShipPic from '../images/shipicon.png'
 
 class Square extends Component{
   constructor(props){
@@ -20,11 +21,18 @@ class Square extends Component{
     }
   }
 
+  resetShips = () => {
+    if (this.props.resetGame === true && this.state.revealShip === true) {
+      this.setState ({revealShip : false })
+    }
+  }
+
   render(){
 
     return(
       <React.Fragment>
         {this.showShipsGameOver()}
+        {this.resetShips()}
         <div
           id="square"
           style = { {backgroundColor: this.props.grid[this.props.index]} }
@@ -33,7 +41,7 @@ class Square extends Component{
             this.showIfHit()
           }}
         >
-       { this.state.revealShip && "Ship" }
+        <div>{ this.state.revealShip && <img src= { ShipPic } /> }</div>
         </div>
       </React.Fragment>
     )
